@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
     node: circleci/node@4.1.0
-    
+
 jobs:
 
   build:
@@ -10,8 +10,8 @@ jobs:
       - image: circleci/openjdk:stretch
     steps:
       - checkout
-      -run:
-        name: Giving permissions
-        command: chmod +x mnvw
-      -run: 
-        command:  ./mvnw -Dmaven.test.skip=true package
+      - run:
+          name: Giving permissions
+          command: chmod +x mnvw
+      - run: 
+          command:  ./mvnw -Dmaven.test.skip=true package
